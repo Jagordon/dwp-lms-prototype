@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+{% from "key-details-bar/macro.njk" import dwpKeyDetailsBar %}
+{% from "timeline/macro.njk" import dwpTimeline %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{% block pageTitle %}
+First - Claimant details
+{% endblock %}
+
+{% block content %}
+{{ govukBackLink({
+text: "Back",
+href: "search"
+}) }}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            Claimant details
+        </h1>
+
+        {{ dwpKeyDetailsBar({
+        primaryIdentifier: {
+        text: 'Name:',
+        value: 'Jane Doe'
+        },
+        secondaryIdentifier: {
+        text: 'Nino:',
+        value: 'QQ 12 34 56 X'
+        },
+        status: {
+        text: 'Claim status:',
+        value: 'SANCTIONED',
+        classes: 'govuk-tag govuk-tag--red'
+        },
+        additionalData: [
+        {
+        value: "4 June 1972",
+        text: "Date of birth:"
+        },
+        {
+        value: "07777 900 900",
+        text: "Mobile number:"
+        },
+        {
+        value: "Welsh speaker",
+        text: "Language:"
+        }
+        ]
+        }) }}
+    </div>
+
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m top-govuk-!-margin-9">
+            Appointment booking
+        </h2>
+        {{ govukTable({
+        caption: "Upcoming meeting",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: true,
+        head: [
+        {
+        text: "Date"
+        },
+        {
+        text: "Reason"
+        }
+        ],
+        rows: [
+        [
+        {
+        text: "12 Sept 2022"
+        },
+        {
+        text: "Review training"
+        }
+        ],
+        [
+        {
+        text: "31 Dec 2022"
+        },
+        {
+        text: "Check-in"
+        }
+        ]
+        ]
+        }) }}
+        <p>
+            <a href="#" class="govuk-link">
+                Create new appointment
+            </a>
+        </p>
+        <p>
+            <a href="#" class="govuk-link">
+                Meeting History
+            </a>
+        </p>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="govuk-!-margin-9">
+            {{ dwpTimeline({
+            title: "Notes",
+            events: [
+            {
+            name: "Jonny Ops",
+            state: "Setup appointment",
+            date: "11 Aug 2021"
+            },
+            {
+            name: "Tiffany Ops",
+            state: "Contacted via Phone",
+            date: "10 Aug 2021"
+            },
+            {
+            name: "Jasmine Ops",
+            state: "Training booked",
+            date: "8 Aug 2021"
+            }
+            ]
+            }) }}
+            <a href="#" class="govuk-link">
+                More notes >
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

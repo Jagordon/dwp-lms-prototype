@@ -1,0 +1,28 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Prototype your service using GOV.UK Prototype Kit
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <p>
+        This is a prototype for the Labour Market System prototype.
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/first_pass/search">First attempt</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}
