@@ -14,7 +14,7 @@ First - Search for a claimant
             Search for a claimant
         </h1>
         <form action="search" method="POST" novalidate>
-            <p>Search using one of the below pieces of information</p>
+            <p>Search using one or more fields</p>
             {{ govukInput({
             label: {
             text: "Enter a National Insurance number",
@@ -150,6 +150,7 @@ First - Search for a claimant
                 }]
             ]
         }) }}
+        <a class="govuk-link" href="config">My role</a>
     </div>
 </div>
 
