@@ -38,4 +38,28 @@ router.get('/uc_clone/claimant-book-appointment', (req, res) => {
     });
 });
 
+router.get('/uc_clone/claimant-book-appointment-wc', (req, res) => {
+    res.render('../views/uc_clone/claimant-book-appointment-wc.html', {
+        navLocation: 'claimant'
+    });
+});
+
+router.get('/uc_clone/claimant-book-slot', (req, res) => {
+    res.render('../views/uc_clone/claimant-book-slot.html', {
+        navLocation: 'claimant'
+    });
+});
+
+router.get('/uc_clone/claimant-book-further', (req, res) => {
+    res.render('../views/uc_clone/claimant-book-further.html', {
+        navLocation: 'claimant'
+    });
+});
+
+
+router.get('/uc_clone/claimant-book-confirm', (req, res) => {
+    res.render('../views/uc_clone/claimant-book-confirm.html', {
+        navLocation: 'claimant'
+    });
+});
 module.exports = router

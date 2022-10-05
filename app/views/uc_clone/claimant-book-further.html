@@ -127,113 +127,110 @@ Manage Working Age Citizens
 
         <div class="inner-block">
 
-            <span class="govuk-caption-xl">
-                Book appointment
-            </span>
-            <h1 class="govuk-heading-xl">
-                Appointment details
+           
+            
+            <h1 class="heading-xlarge " data-sanitized-page-title="Further information about the appointment" data-tag-page-title="Further information about the appointment">
+                <span id="id-subtitle" class="category heading-secondary">
+                    
+                </span>
+              <span class="js-page-title" id="main-heading">
+            Further information about the appointment  </span>
+                <span class="category heading-secondary">
+                  
+                </span>
             </h1>
-
-            {{ govukRadios({
-                name: "appointment-channel",
-                fieldset: {
-                  legend: {
-                    text: "Select an appointment channel",
-                    classes: "govuk-fieldset__legend--m"
-                  }
-                },
-                items: [
-                  {
-                    value: "jobcentre",
-                    text: "In a jobcentre"
-                  },
-                  {
-                    value: "phone",
-                    text: "By Phone"
-                  },
-                  {
-                    value: "By video",
-                    text: "video"
-                  }
-                ]
-              }) }}
-
-              {{ govukSelect({
-                id: "sort",
-                name: "sort",
-                label: {
-                  html: "<label class='govuk-heading-m' for='sort'>
-                    Select appointment location
-                  </label>"
-                },
-                items: [
-                  {
-                    value: "kendal",
-                    text: "Kendal Jobcentre Plus (claimant's jobcentre)"
-                  }
-                ]
-              }) }}
-
-
-            {{ govukRadios({
-                name: "appointment-type",
-                fieldset: {
-                  legend: {
-                    text: "Select an appointment type",
-                    classes: "govuk-fieldset__legend--m"
-                  }
-                },
-                items: [
-                {
-                  value: "first",
-                  text: "Biographical"
-                },
-                {
-                  value: "first",
-                  text: "Initial Appointment"
-                },
-                  {
-                    value: "first",
-                    text: "First Commitments"
-                  },
-                  {
-                    value: "scsupport",
-                    text: "Work Coach Support"
-                  },
-                  {
-                    value: "wsr",
-                    text: "Work Search Review"
-                  },
-                  {
-                    value: "other",
-                    text: "Other"
-                  }
-                ]
-              }) }}
-              
-              {{ govukRadios({
-                name: "appointment-type",
-                fieldset: {
-                  legend: {
-                    text: "Select an appointment duration",
-                    classes: "govuk-fieldset__legend--m"
-                  }
-                },
-                items: [
-                  {
-                    value: "first",
-                    text: "30 minutes"
-                  },
-                  {
-                    value: "scsupport",
-                    text: "50 minutes"
-                  }
-                ]
-              }) }}
+            
+            
+            
+            <form method="post" novalidate="" autocomplete="off" action="https://agent-training01.ucd.gpn.gov.uk/agent/book-appointment/notes/efe53986-3d50-444b-9650-29241e246b28?t=f3Fc21#" data-validation-enabled="true" data-form-validation="true">
+            
+              <input type="hidden" name="csrfToken" value="V5LU-H00X-N5FI-2G4X-PSRW-H1A8-6YZP-5MNA">
+            
+                  <input type="hidden" name="processId" value="efe53986-3d50-444b-9650-29241e246b28">
+            
+                  <input type="hidden" name="token" value="f3Fc21">
+            
+                    <fieldset class="text">
+            
+            <div id="id-section-hasSpecialRequirements" class="govuk-form-group gutter-bottom  " data-group-toggle-content="">
+              <fieldset class="govuk-fieldset " aria-describedby="id-section-help-hasSpecialRequirements id-section-error-hasSpecialRequirements ">
+                <legend id="id-label-hasSpecialRequirements" class="govuk-fieldset__legend text govuk-fieldset__legend--m" data-value="hasSpecialRequirements">
+                    Is there anything the claimant needs to attend or understand the appointment?
+                </legend>
+                <div id="id-section-help-hasSpecialRequirements" class="govuk-hint ">
+                  Include extra support such as translator.
+                </div>
+                <div data-validation-error="" id="id-section-error-hasSpecialRequirements" class="govuk-error-message form-error " aria-live="assertive">
+                  
+                </div>
+                
+            
+                <div class="govuk-radios govuk-radios--inline">
+                  <div class="govuk-radios__item ">
+                    <input type="radio" id="hasSpecialRequirements-clickable-true" name="hasSpecialRequirements" value="true" data-test-radio-true="" data-group-toggle-content-trigger="has-special-requirements" required="" class="govuk-radios__input google-analytics-data-layer-input" aria-describedby="id-label-hasSpecialRequirements id-section-help-hasSpecialRequirements id-section-error-hasSpecialRequirements">
+                    <label for="hasSpecialRequirements-clickable-true" class="govuk-label govuk-radios__label">
+                        Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item ">
+                    <input type="radio" id="hasSpecialRequirements-clickable-false" name="hasSpecialRequirements" value="false" data-test-radio-false="" required="" aria-describedby="id-label-hasSpecialRequirements id-section-help-hasSpecialRequirements id-section-error-hasSpecialRequirements" class="govuk-radios__input google-analytics-data-layer-input">
+                    <label for="hasSpecialRequirements-clickable-false" class="govuk-label govuk-radios__label">
+                        No
+                    </label>
+                    </div>
+                </div>
+              </fieldset>
+            </div>
+                      <div class="gutter-top gutter-bottom js-hidden" data-group-toggle-content-container="has-special-requirements">
+            
+            <div id="id-section-specialRequirements" class="form-group  no-margin gutter-top ">
+              <label class="form-label-bold " for="id-specialRequirements">
+                Enter requirements
+              </label>
+             <div id="id-section-help-specialRequirements" class="form-hint ">
+                
+              </div>
+              <div id="id-section-error-specialRequirements" data-validation-error="" class="form-error validation-message " aria-live="assertive">
+                
+              </div>
+              <textarea class="form-control-4-4 text " rows="6" id="id-specialRequirements" name="specialRequirements" aria-describedby="id-section-help-specialRequirements id-section-error-specialRequirements" required="" disabled=""></textarea>
+            </div>
+                      </div>
+            
+            
+            
+            <div id="id-section-otherAgentNotes" class="form-group  ">
+              <label class="form-label-bold " for="id-otherAgentNotes">
+                Any further agent notes about this appointment (optional)
+              </label>
+             <div id="id-section-help-otherAgentNotes" class="form-hint ">
+                These will appear in the claimant history
+              </div>
+              <div id="id-section-error-otherAgentNotes" data-validation-error="" class="form-error validation-message " aria-live="assertive">
+                
+              </div>
+              <textarea class="form-control-4-4 text " rows="6" id="id-otherAgentNotes" name="otherAgentNotes" aria-describedby="id-section-help-otherAgentNotes id-section-error-otherAgentNotes"></textarea>
+            </div>
+            
+            
+            
+            <div id="id-section-additionalClaimantInstructions" class="form-group  ">
+              <label class="form-label-bold " for="id-additionalClaimantInstructions">
+                Extra information for the claimant (optional)
+              </label>
+             <div id="id-section-help-additionalClaimantInstructions" class="form-hint ">
+                The claimant will receive the date, time, place and type of appointment. If you need to tell them anything else, enter it here.
+              </div>
+              <div id="id-section-error-additionalClaimantInstructions" data-validation-error="" class="form-error validation-message " aria-live="assertive">
+                
+              </div>
+              <textarea class="form-control-4-4 text " rows="6" id="id-additionalClaimantInstructions" name="additionalClaimantInstructions" aria-describedby="id-section-help-additionalClaimantInstructions id-section-error-additionalClaimantInstructions"></textarea>
+            </div>
+            
 
               {{ govukButton({
                 text: "Continue",
-                href: "claimant-book-appointment-wc"
+                href: "claimant-book-confirm"
               }) }}
               
               <p><a href="#" class="govuk-link">Back</a></p>

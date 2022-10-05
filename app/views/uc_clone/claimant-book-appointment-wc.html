@@ -127,113 +127,62 @@ Manage Working Age Citizens
 
         <div class="inner-block">
 
-            <span class="govuk-caption-xl">
-                Book appointment
-            </span>
             <h1 class="govuk-heading-xl">
-                Appointment details
+                Work coach
             </h1>
+            {% set wc %}
+
+            {{ govukSelect({
+              id: "wc",
+              name: "sort",
+              label: {
+                html: "<label class='govuk-heading-m' for='sort'>
+                  Work coach
+                </label>"
+              },
+              items: [
+                {
+                  value: "1",
+                  text: "AMANDA PEYTON"
+                }
+              ]
+            }) }}
+            {% endset %}
 
             {{ govukRadios({
-                name: "appointment-channel",
+                name: "appointment-wc",
                 fieldset: {
                   legend: {
-                    text: "Select an appointment channel",
+                    text: "Select work coach",
                     classes: "govuk-fieldset__legend--m"
                   }
                 },
                 items: [
                   {
-                    value: "jobcentre",
-                    text: "In a jobcentre"
+                    value: "1",
+                    text: "Temitayo Adepipe (claimant's work coach)"
                   },
                   {
-                    value: "phone",
-                    text: "By Phone"
+                    value: "2",
+                    text: "Next avaliable work coach"
                   },
                   {
-                    value: "By video",
-                    text: "video"
+                    value: "3",
+                    text: "Choose another work coach",
+                    conditional: {
+                        html: wc
+                    }
                   }
                 ]
               }) }}
-
-              {{ govukSelect({
-                id: "sort",
-                name: "sort",
-                label: {
-                  html: "<label class='govuk-heading-m' for='sort'>
-                    Select appointment location
-                  </label>"
-                },
-                items: [
-                  {
-                    value: "kendal",
-                    text: "Kendal Jobcentre Plus (claimant's jobcentre)"
-                  }
-                ]
-              }) }}
+        
 
 
-            {{ govukRadios({
-                name: "appointment-type",
-                fieldset: {
-                  legend: {
-                    text: "Select an appointment type",
-                    classes: "govuk-fieldset__legend--m"
-                  }
-                },
-                items: [
-                {
-                  value: "first",
-                  text: "Biographical"
-                },
-                {
-                  value: "first",
-                  text: "Initial Appointment"
-                },
-                  {
-                    value: "first",
-                    text: "First Commitments"
-                  },
-                  {
-                    value: "scsupport",
-                    text: "Work Coach Support"
-                  },
-                  {
-                    value: "wsr",
-                    text: "Work Search Review"
-                  },
-                  {
-                    value: "other",
-                    text: "Other"
-                  }
-                ]
-              }) }}
-              
-              {{ govukRadios({
-                name: "appointment-type",
-                fieldset: {
-                  legend: {
-                    text: "Select an appointment duration",
-                    classes: "govuk-fieldset__legend--m"
-                  }
-                },
-                items: [
-                  {
-                    value: "first",
-                    text: "30 minutes"
-                  },
-                  {
-                    value: "scsupport",
-                    text: "50 minutes"
-                  }
-                ]
-              }) }}
+
 
               {{ govukButton({
                 text: "Continue",
-                href: "claimant-book-appointment-wc"
+                href: "claimant-book-slot"
               }) }}
               
               <p><a href="#" class="govuk-link">Back</a></p>
